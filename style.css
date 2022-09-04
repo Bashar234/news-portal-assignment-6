@@ -10,3 +10,17 @@ body {
   font-family: "Ubuntu", sans-serif;
   background-color: #dee1e6;
 }
+/* header */
+.title {
+  background-color: #6610f2;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+}
+.title-part2,
+.new-nav {
+  color: #6610f2;
+}
+i {
+  font-size: 25px;
+}
