@@ -24,3 +24,18 @@ body {
 i {
   font-size: 25px;
 }
+
+/* catagory */
+#catagoryList {
+  display: flex;
+  justify-content: space-between;
+}
+#catagoryList li {
+  text-decoration: none;
+  list-style-type: none;
+  cursor: pointer;
+}
+#catagoryList li:hover {
+  color: #6610f2;
+  transform: translateY(-5px);
+}
