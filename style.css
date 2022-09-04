@@ -12,14 +12,14 @@ body {
 }
 /* header */
 .title {
-  background-color: #6610f2;
+  background-color: #a084ce;
   border-radius: 5px;
   padding: 5px 10px;
-  color: white;
+  color: wheat;
 }
 .title-part2,
 .new-nav {
-  color: #6610f2;
+  color: #a084ce;
 }
 i {
   font-size: 25px;
@@ -36,7 +36,7 @@ i {
   cursor: pointer;
 }
 #catagoryList li:hover {
-  color: #6610f2;
+  color:cyan;
   transform: translateY(-5px);
 }
 
@@ -50,7 +50,7 @@ i {
   display: flex;
 }
 .rating {
-  color: orange;
+  color: rgb(52, 206, 60);
   font-size: 20px;
 }
 .card-text {

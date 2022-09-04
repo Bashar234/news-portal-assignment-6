@@ -3,18 +3,18 @@ const catagoryList = async () => {
   try {
     const res = await fetch(url);
     const data = await res.json();
-    CreateCatagory(data.data.news_category);
+    CreateACatagory(data.data.news_category);
   } catch (err) {
     console.log(err);
   }
 };
 
-const HomePage = async () => {
+const HomePage1 = async () => {
   catagoryId(8);
 };
 
-const CreateCatagory = (item) => {
-  const ul = document.getElementById("catagoryList");
+const CreateACatagory = (item) => {
+  const ul = document.getElementById("catagoryList1");
   item.map((res) => {
     const li = document.createElement("li");
     li.innerHTML = `
@@ -24,9 +24,9 @@ const CreateCatagory = (item) => {
   });
 };
 
-const spinnerFunc = (sp) => {
-  const parentDiv1 = document.getElementById("spinnerLoading");
-  parentDiv1.textContent = "";
+const spinnerFunc1 = (sp) => {
+  const parentdiv = document.getElementById("spinnerLoading");
+  parentdiv.textContent = "";
   const div = document.createElement("div");
   !sp &&
     (document.getElementById("homepage").classList.add("d-none"),
@@ -38,21 +38,21 @@ const spinnerFunc = (sp) => {
 </div>
     
     `));
-  parentDiv1.appendChild(div);
+  parentdiv.appendChild(div);
 
   sp && document.getElementById("homepage").classList.remove("d-none");
 };
 
 const catagoryId = async (id) => {
   //console.log(id);
-  spinnerFunc(false);
+  spinnerFunc1(false);
   try {
     const res = await fetch(
       `https://openapi.programming-hero.com/api/news/category/0${id}`
     );
     const data = await res.json();
-    spinnerFunc(true);
-    displayNew(data.data);
+    spinnerFunc1(true);
+    displayNewThing(data.data);
     document.getElementById("itemNumberCard").classList.remove("d-none");
     document.getElementById("sortCard").classList.remove("d-none");
     document.getElementById("itemNumber").innerText = `${
@@ -79,7 +79,7 @@ const catagoryId = async (id) => {
   }
 };
 
-const displayNew = (item) => {
+const displayNewThing = (item) => {
   item.sort((a, b) => b.total_view - a.total_view);
   const parentDiv = document.getElementById("newsContent");
   parentDiv.textContent = "";
@@ -202,4 +202,4 @@ const openModal = async (id) => {
 
 //function
 catagoryList();
-HomePage();
+HomePage1();
