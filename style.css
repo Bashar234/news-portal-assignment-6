@@ -39,3 +39,25 @@ i {
   color: #6610f2;
   transform: translateY(-5px);
 }
+
+/* Author */
+.autherPic img {
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+}
+.author {
+  display: flex;
+}
+.rating {
+  color: orange;
+  font-size: 20px;
+}
+.card-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
