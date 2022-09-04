@@ -61,3 +61,19 @@ i {
   line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+
+/* responsive */
+@media only screen and (max-width: 992px) {
+  #catagoryList {
+    display: flex;
+    flex-direction: column;
+  }
+  #catagoryList li:hover {
+    transform: translateX(10px);
+  }
+  .newsThum {
+    width: 100%;
+    height: 400px;
+    padding: 5px;
+  }
+}
